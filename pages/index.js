@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Image from "next/image";
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -31,10 +32,11 @@ export default function Home() {
         </div>
         <div className="flex flex-col sm:flex-row w-1/2 space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
           <button className="btn">Google Search</button>
-          <button className="btn">I Feel Lucky</button>
+          <button className="btn">I'm Feeling Lucky</button>
         </div>
       </form>
       {/* Footer */}
+      <Footer />
     </div>
   );
 }
