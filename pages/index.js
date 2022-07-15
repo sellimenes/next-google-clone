@@ -10,8 +10,10 @@ export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
   const search = (event) => {
-    event.preventDeault();
+    event.preventDefault();
     const term = searchInputRef.current.value;
+    if (!term.trim()) return;
+    router.push(`/search?term=${term.trim()}`);
   };
   return (
     <div>
