@@ -1,19 +1,24 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function User({ className }) {
   const { data: session } = useSession();
   const router = useRouter();
   if (session) {
     return (
-      <>
-        <img
+      <div
+        className={`w-10 h-10 rounded-full hover:bg-gray-200 cursor-pointer overflow-hidden p-1 ${className}`}
+      >
+        <Image
           onClick={signOut}
           src={session.user.image}
           alt={session.user.name}
-          className={`h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-1 ${className}`}
+          width={40}
+          height={40}
+          className="rounded-full"
         />
-      </>
+      </div>
     );
   }
   return (
