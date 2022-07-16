@@ -35,6 +35,7 @@ export default function Home() {
         <div className="flex w-full mx-auto mt-5 max-w-[90%] border border-gray-200 hover:shadow-lg focus:shadow-lg px-5 py-3 rounded-full cursor-pointer items-center sm:max-w-lg lg:max-w-2xl">
           <SearchIcon className="h-5 text-gray-500 mr-3" />
           <input
+            autoFocus
             ref={searchInputRef}
             type="text"
             className="flex-grow focus:outline-none cursor-pointer"
