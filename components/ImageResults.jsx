@@ -31,7 +31,7 @@ export default function ImageResults({ results }) {
           </div>
         ))}
       </div>
-      <div className="ml-16">
+      <div className="ml-16 ">
         <PaginationButtons />
       </div>
     </div>

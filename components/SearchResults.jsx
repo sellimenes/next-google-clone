@@ -8,7 +8,23 @@ function SearchResults({ results }) {
         About {results.searchInformation.formattedTotalResults} results (
         {results.searchInformation.formattedSearchTime} seconds)
       </p>
-      {results.items.map((result) => {
+      <div key="myads" className="max-w-xl mb-8">
+        <div className="group">
+          <a className="text-sm truncate" href="https://selimenes.dev">
+            selimenes.dev
+          </a>
+          <a
+            className="group-hover:underline decoration-blue-800"
+            href="https://selimenes.dev"
+          >
+            <h2 className="truncate text-xl font-medium text-blue-800">
+              Selim Enes
+            </h2>
+          </a>
+        </div>
+        <p className="text-gray-600">Front-End Developer | Selim Enes</p>
+      </div>
+      {results.items?.map((result) => {
         return (
           <div key={result.link} className="max-w-xl mb-8">
             <div className="group">
