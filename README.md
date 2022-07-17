@@ -9,5 +9,7 @@
 🔷 Independencies:
 
 React Hero Icons
+
 Tailwind CSS
+
 HTML React Parser
